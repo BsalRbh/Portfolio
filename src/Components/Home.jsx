@@ -45,7 +45,7 @@ const Home = ({ name, title }) => {
           textShadow: "4px 4px 8px rgba(0, 0, 0, 0.7)",
         }}
       >
-        <h1 style={{ fontSize: "9rem", fontWeight: "bolder" }}>{name}</h1>
+        <h1 style={{ fontSize: "9rem", fontWeight: "bolder", marginBottom: "20px" }}>{name}</h1>
         <h2>{title}</h2>
       </div>
       <div style={{ position: "absolute", bottom: "3rem", left: "50%" }}>

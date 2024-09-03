@@ -26,7 +26,7 @@ import Education from "./Components/Education";
  */
 const siteProps = {
   name: "Bishal Rajbahak",
-  title: "Web Developer",
+  title: "FrontEnd Developer",
   email: "bsl.rbh@gmail.com",
   gitHub: "BsalRbh",
   instagram: "",
