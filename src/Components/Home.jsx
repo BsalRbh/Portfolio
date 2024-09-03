@@ -25,6 +25,12 @@ import image from "../images/me.jpg";
 const imageAltText = "";
 
 const Home = ({ name, title }) => {
+  const handleScroll = (e) => {
+    e.preventDefault();
+    const aboutSection = document.getElementById("about");
+    aboutSection.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section id="home" className="min-height">
       <img className="background" src={image} alt="" />
@@ -36,14 +42,21 @@ const Home = ({ name, title }) => {
           width: "17rem",
           color: "#FFFFFF",
           borderRadius: "8px", // Adjust the value as needed for roundness
-           textShadow: "4px 4px 8px rgba(0, 0, 0, 0.7)",
+          textShadow: "4px 4px 8px rgba(0, 0, 0, 0.7)",
         }}
       >
         <h1 style={{ fontSize: "9rem", fontWeight: "bolder" }}>{name}</h1>
         <h2>{title}</h2>
       </div>
       <div style={{ position: "absolute", bottom: "3rem", left: "50%" }}>
-        <img src={arrowSvg} style={{ height: "3rem", width: "3rem" }} alt={imageAltText} />
+        <a href="#about" onClick={handleScroll}>
+          <img
+            src={arrowSvg}
+            style={{ height: "3rem", width: "3rem" }}
+            alt={imageAltText}
+            className="arrow-down"
+          />
+        </a>
       </div>
     </section>
   );
