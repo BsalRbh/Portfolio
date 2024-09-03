@@ -8,6 +8,10 @@ html, body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 div#main {
   width: 100vw;
   flex-direction: column;
@@ -98,8 +102,8 @@ a:hover {
 
 .container {
   grid-gap: 20px;
-  grid-template-columns: 330px 300px;
   margin: 20px auto;
+  padding: 10px;
   display: grid;
 }
 
@@ -116,6 +120,57 @@ a:hover {
 img.socialIcon {
   height: 30px;
   width: 30px;
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.arrow-down {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  animation: arrowBounce 1.5s infinite;
+  display: flex;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.arrow-down:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #4e567e;
+  border-right: 2px solid #4e567e;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes arrowBounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 /*# sourceMappingURL=index.4d663569.css.map */
